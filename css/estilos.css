@@ -1,0 +1,51 @@
+.media img{
+    width: 100%;
+}
+.mascara{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.mascara img {
+    cursor: pointer;
+}
+ul{
+    list-style-type: none!important;
+    list-style-position: inside!important;
+    padding-left: 0;
+}
+.fondoCopado{
+    background:rgba(25, 24, 23, 0.8) url(../img/fondo.jpg)  ;
+    background-size: 100%;
+    background-position: 0px bottom;
+    background-blend-mode: difference;
+}
+.carousel-inner{
+    height: 300px;
+    text-align: center;
+}
+.carousel-inner img{
+    height:300px;
+}
+.patalla-completa{   
+    width: 100%;
+    height: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    transition: all linear 1s;   
+}
+.patalla-completa img{
+    display: block;
+    position: absolute;
+    width: 40%;
+    margin: auto;
+    top: 15%;
+    left: 30%;
+
+}
+.patalla-completa.ng-hide{
+    opacity: 0;
+}

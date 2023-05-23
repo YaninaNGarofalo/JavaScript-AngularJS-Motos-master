@@ -1,0 +1,37 @@
+<main class="container p-5" ng-controller="ctrl">
+    <h2 class="mb-4">{{fichaMoto.nombre}}</h2>
+    <div class="row">
+        <div class="col-md-12 fondoCopado mb-4">
+            <img class=" mx-auto d-block" src="{{fichaMoto.imagenes[0]}}" alt="">
+        </div>
+        <div class="col-md-4 mascara" ng-click="ampliarImagen(fichaMoto.imagenes[1])"> 
+            <img class="img-fluid" src="{{fichaMoto.imagenes[1]}}" alt="">
+        </div>
+        <div class="col-md-4 mascara" ng-click="ampliarImagen(fichaMoto.imagenes[2])">
+            <img class="img-fluid" src="{{fichaMoto.imagenes[2]}}" alt="">
+        </div>
+        <div class="col-md-4 mascara" ng-click="ampliarImagen(fichaMoto.imagenes[3])">
+            <img class="img-fluid" src="{{fichaMoto.imagenes[3]}}" alt="">
+        </div>
+    </div>
+    <h3 class="mb-3 mt-3">Ficha Tecnica:</h3>
+    <ul>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Codigo:</span> {{fichaMoto.id}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Modelo:</span> {{fichaMoto.modelo}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Tipo de motor:</span> {{fichaMoto.motor.tipoMotor}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Marchas:</span> {{fichaMoto.motor.marchas}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Transmision:</span> {{fichaMoto.motor.transmision}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Arranque:</span> Electrico: <input type="checkbox" ng-model="fichaMoto.motor.arranque.electrico"> - Mecanico: <input type="checkbox" ng-model="fichaMoto.motor.arranque.mecanico"></li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Fabricante:</span> {{fichaMoto.fabricante.nombre}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Pais de Origen:</span> {{fichaMoto.fabricante.paisOrigen}}</li>
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Cilindradas:</span> {{fichaMoto.cilindradas}}</li>   
+        <li><i class="fas fa-angle-double-right text-danger"></i> <span class="text-uppercase font-weight-bold">Tamaño:</span> Alto: {{fichaMoto.tamanio.alto}}mm - Ancho: {{fichaMoto.tamanio.ancho}}mm - Largo: {{fichaMoto.tamanio.largo}}mm</li>       
+    </ul>
+    <p><span class="font-weight-bold">Descripcion: </span>{{fichaMoto.fabricante.nombre}} {{fichaMoto.nombre | lowercase}} con motor {{fichaMoto.descripcion | lowercase}} de {{fichaMoto.cilindradas}} cilindradas. Origen {{fichaMoto.fabricante.paisOrigen}}.</p>
+
+    <button type="button" class="btn btn-danger" ng-click="Volver()">Volver</button>
+              
+    <div class="patalla-completa" ng-show="pantallaCompleta" ng-click="ocultarPantallaCompleta()">
+        <img ng-src="{{imagenMax}}" alt="">      
+    </div>
+</main>

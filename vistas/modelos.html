@@ -1,0 +1,35 @@
+<main class="container" ng-controller="ctrl">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="" src="{{motos[0].imagenes[0]}}" alt="First slide">
+          </div>
+          <div class="carousel-item" >
+            <img class="" src="{{motos[1].imagenes[0]}}" alt="Second slide">
+          </div>
+          <div class="carousel-item" >
+            <img class="" src="{{motos[2].imagenes[0]}}" alt="Third slide">
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end">
+        <span class="d-block p-1 font-weight-bold pr-3">Ordear por: </span>
+        <div class="btn-group"  role="group">
+          <button type="button" class="btn btn-dark" ng-click="ordenar('nombre')">Nombre</button>
+          <button type="button" class="btn btn-dark" ng-click="ordenar('modelo')">Modelo</button>
+        </div>
+      </div>
+      <div class="row m-5">
+          <div class="col-md-4 media" ng-repeat="moto in motos | orderBy: orden ">
+            <div class="media-body">
+                <div class="mascara">
+                  <img ng-src="{{moto.imagenes[1]}}" alt="">
+                </div>
+                <h3 class="mt-2 mb-2" ><i class="fab fa-google-play text-danger"></i> {{moto.nombre}}</h3>
+                <p>{{moto.descripcion}}</p>
+                <button class="btn btn-danger" type="button" ng-click="verFicha(moto)">Ver Más</button>
+            </div>
+          </div>
+      </div>
+</main>

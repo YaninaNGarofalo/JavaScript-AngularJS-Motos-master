@@ -1,0 +1,80 @@
+[
+    {
+        "id": 123,
+        "nombre": "DUE CLASSIC",
+        "modelo":"C",
+        "descripcion":"Monocilíndrico 4 Tiempos",
+        "imagenes":["img/DUE/01.png","img/DUE/02.jpg", "img/DUE/03.jpg", "img/DUE/04.jpg"],
+        "motor":{
+            "tipoMotor":"Monocilíndrico 4 Tiempos",
+            "marchas":"4 Marchas",
+            "transmision":"Semi Automática",
+            "arranque":{
+                "electrico":true,
+                "mecanico":true
+            }
+        },
+        "fabricante": {
+            "nombre":"Zanella",
+            "paisOrigen":"China"
+        },
+        "cilindradas":110,
+        "tamanio":{
+            "alto": 1100,
+            "ancho": 715,
+            "largo":1835
+        }
+    },
+    {
+        "id": 456,
+        "nombre": "RX",        
+        "modelo":"B",
+        "descripcion":"Monocilíndrico 4 OHV",
+        "imagenes":["img/RX/01.png","img/RX/02.jpg", "img/RX/03.jpg", "img/RX/04.jpg"],
+        "motor":{
+            "tipoMotor":"Monocilíndrico 4 OHV",
+            "marchas":"Manual 5 velocidades",
+            "transmision":"Manual",
+            "arranque":{
+                "electrico":true,
+                "mecanico":true
+            }
+        },
+        "fabricante": {
+            "nombre":"Zanella",
+            "paisOrigen":"China"
+        },
+        "cilindradas":150,
+        "tamanio":{
+            "alto": 1040,
+            "ancho": 730,
+            "largo":2000
+        }
+    },
+    {
+        "id": 789,
+        "nombre": "EXCLUSIVE EDIZIONE",        
+        "modelo":"A",
+        "descripcion":"Monocilíndrico 4 Tiempos",
+        "imagenes":["img/EDIZIONE/01.png","img/EDIZIONE/02.jpg", "img/EDIZIONE/03.jpg", "img/EDIZIONE/04.jpg"],
+        "motor":{
+            "tipoMotor":"Monocilíndrico 4 Tiempos",
+            "marchas":"Automática V.A.V.",
+            "transmision":"Automática",
+            "arranque":{
+                "electrico":true,
+                "mecanico":true
+            }
+        },
+        "fabricante": {
+            "nombre":"Zanella",
+            "paisOrigen":"China"
+        },
+        "cilindradas":150,
+        "tamanio":{
+            "alto": 1135,
+            "ancho": 685,
+            "largo":1980
+        }
+    }
+]
